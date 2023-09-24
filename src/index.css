@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .aj_container {
+    @apply max-w-[1440px] mx-auto py-4 px-3;
+  }
+}
+
+.active {
+  @apply font-bold text-blue-800;
+}
