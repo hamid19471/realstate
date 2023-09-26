@@ -1,6 +1,6 @@
 const Subscription = () => {
   return (
-    <div className="bg-[url('/public/subscription-image.png')] bg-cover px-5 py-14 md:px-28 lg:px-40 lg:py-24">
+    <div className="bg-[url('/public/images/subscription-image.png')] bg-cover px-5 py-14 md:px-28 lg:px-40 lg:py-24">
       <div className="flex flex-col items-center justify-center">
         <h3 className="font-bold text-xl md:text-3xl lg:text-4xl xl:text-6xl text-center text-white">
           Get our special prices & latest info
