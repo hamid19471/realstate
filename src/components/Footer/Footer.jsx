@@ -1,8 +1,8 @@
 const Footer = () => {
   return (
-    <div className="w-full py-20 md:pt-40 lg:px-32 overflow-hidden">
-      <div className=" flex flex-col md:flex-row items-start md:items-center justify-between p-2">
-        <div className="flex flex-col items-start w-[370px]">
+    <div className="w-full md:py-8 md:px-2 lg:py-20 lg:px-8 xl:p-28 overflow-hidden">
+      <div className=" flex flex-col md:flex-row items-start md:items-center justify-between py-2">
+        <div className="flex flex-col items-start w-[380px] lg:w-[290px] md:w-[170px]">
           <h1 className="font-bold text-3xl mb-3">
             soge<span className="text-blue-700 font-bold text-3xl">King</span>
           </h1>
