@@ -22,9 +22,7 @@ const Header = () => {
       <div className="font-bold text-xl md:text-3xl">
         soge<span className="text-blue-700">King</span>
       </div>
-      <div>
-        <ResponsiveMenu />
-      </div>
+      <ResponsiveMenu />
       <div className="hidden sm:flex">
         <ul className="flex items-center justify-center gap-8 font-semibold ">
           {menu?.map((item) => (
