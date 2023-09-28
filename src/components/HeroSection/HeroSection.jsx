@@ -11,10 +11,10 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-col items-center justify-center lg:items-start gap-4 mt-8 xl:mt-20">
           <h3 className="font-bold text-2xl">Our Partner</h3>
-          <div className="flex items-center justify-center space-x-4 lg:mt-7">
-            <img src={"/public/images/Airbnb svg.png"} alt="" />
-            <img src={"/public/images/Traveloka svg.png"} alt="" />
-            <img src={"/public/images/Pegi svg.png"} alt="" />
+          <div className="flex items-center justify-center space-x-4 lg:mt-5">
+            <img src={"./public/images/Airbnb svg.png"} alt="" />
+            <img src={"./public/images/Traveloka svg.png"} alt="" />
+            <img src={"./public/images/Pegi svg.png"} alt="" />
           </div>
         </div>
       </div>
