@@ -20,5 +20,43 @@
       "title": "Contact",
       "path": "/contact-us"
     }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "image": "/public/testimonials_images/01.png",
+      "name": "Jane Cooper",
+      "position": "Marketing Coordinator",
+      "rate": 4,
+      "title": "Great Work!",
+      "comment": "I can't thank SogeKing Real Estate Company enough for their outstanding service. From the moment I started working with them, their team of dedicated professionals went above and beyond to help me find my dream home."
+    },
+    {
+      "id": 2,
+      "image": "/public/testimonials_images/02.png",
+      "name": "Cameron Williamson",
+      "position": "Web Designer",
+      "rate": 4.8,
+      "title": "Great Work!",
+      "comment": "I can't thank SogeKing Real Estate Company enough for their outstanding service. From the moment I started working with them, their team of dedicated professionals went above and beyond to help me find my dream home."
+    },
+    {
+      "id": 3,
+      "image": "/public/testimonials_images/03.png",
+      "name": "Darrell Steward",
+      "position": "President of Sales",
+      "rate": 4.5,
+      "title": "Great Work!",
+      "comment": "I can't thank SogeKing Real Estate Company enough for their outstanding service. From the moment I started working with them, their team of dedicated professionals went above and beyond to help me find my dream home."
+    },
+    {
+      "id": 4,
+      "image": "/public/testimonials_images/04.png",
+      "name": "Eleanor Pena",
+      "position": "Medical Assistant",
+      "rate": 4.2,
+      "title": "Great Work!",
+      "comment": "I can't thank SogeKing Real Estate Company enough for their outstanding service. From the moment I started working with them, their team of dedicated professionals went above and beyond to help me find my dream home."
+    }
   ]
 }
