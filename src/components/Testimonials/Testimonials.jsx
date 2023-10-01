@@ -1,26 +1,13 @@
-import { useEffect, useState } from "react";
 import TestimonialCard from "./TestimonialCard/TestimonialCard";
-import axios from "axios";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import useFetch from "../../hooks/useFetch";
 
 const Testimonials = () => {
-  const [loading, setLoading] = useState(true);
-  const [testimonials, setTestimonials] = useState([]);
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    const fetchTestimonials = async () => {
-      try {
-        const { data } = await axios.get("http://localhost:3001/testimonials");
-        setTestimonials(data);
-        setLoading(false);
-      } catch (error) {
-        setError(error.message);
-        setLoading(false);
-      }
-    };
-    fetchTestimonials();
-  }, []);
+  const {
+    data: testimonials,
+    error,
+    loading,
+  } = useFetch("http://localhost:3001/testimonials");
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
