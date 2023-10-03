@@ -4,8 +4,13 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Hotels from "./pages/Hotels/Hotels";
 import Contact from "./pages/Contact/Contact";
+import { useEffect } from "react";
 
 const App = () => {
+  //change page scroll to top on every page change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="aj_container">
       <Routes>
