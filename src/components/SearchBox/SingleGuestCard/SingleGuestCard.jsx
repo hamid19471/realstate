@@ -4,7 +4,7 @@ import useOutsideClick from "../../../hooks/useOutsiteClick";
 
 const SingleGuestCard = ({ options, handleGestOptions, setIsOpen }) => {
   const ref = useRef();
-  useOutsideClick(ref, () => setIsOpen(false));
+  useOutsideClick(ref, "GestOptions", () => setIsOpen(false));
   return (
     <div
       ref={ref}

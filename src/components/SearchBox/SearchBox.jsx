@@ -41,7 +41,11 @@ const SearchBox = () => {
         </div>
         <div>
           <h3 className="font-semibold text-xl">Guests</h3>
-          <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer">
+          <div
+            id="GestOptions"
+            onClick={() => setIsOpen(!isOpen)}
+            className="cursor-pointer"
+          >
             How many guests?
           </div>
           {isOpen && (
