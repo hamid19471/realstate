@@ -1,11 +1,33 @@
+import { useRef } from "react";
 import CartItems from "../Cartitem/CartItem";
+import useOutsideClick from "../../../hooks/useOutsiteClick";
 
-const SingleGuestCard = () => {
+const SingleGuestCard = ({ options, handleGestOptions, setIsOpen }) => {
+  const ref = useRef();
+  useOutsideClick(ref, () => setIsOpen(false));
   return (
-    <div className="absolute bg-slate-200 p-4 rounded-lg shadow-lg w-[220px] md:my-1">
-      <CartItems title="Adult" number={1} range={3} />
-      <CartItems title="Children" number={0} range={4} />
-      <CartItems title="room" number={1} range={6} />
+    <div
+      ref={ref}
+      className="absolute bg-slate-200 p-4 rounded-lg shadow-lg w-[220px] md:my-1"
+    >
+      <CartItems
+        handleGestOptions={handleGestOptions}
+        title="Adults"
+        options={options}
+        minLimit={1}
+      />
+      <CartItems
+        handleGestOptions={handleGestOptions}
+        title="Children"
+        options={options}
+        minLimit={0}
+      />
+      <CartItems
+        handleGestOptions={handleGestOptions}
+        title="rooms"
+        options={options}
+        minLimit={1}
+      />
     </div>
   );
 };

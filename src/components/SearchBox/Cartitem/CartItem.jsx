@@ -1,30 +1,18 @@
-import { useState } from "react";
-
-const CartItems = ({ title, number, range }) => {
-  const [guest, setGuest] = useState(number);
-  const handleDecrese = () => {
-    return guest > number ? setGuest(guest - 1) : setGuest(number);
-  };
-  const handleIncrease = () => {
-    return guest < range ? setGuest(guest + 1) : setGuest(range);
-  };
+const CartItems = ({ options, title, minLimit, handleGestOptions }) => {
   return (
     <div className="flex items-center justify-between gap-2 my-4">
       <h3 className="font-semibold text-lg">{title}</h3>
       <div>
         <button
-          onClick={handleDecrese}
+          onClick={() => handleGestOptions(title, "decrement")}
           className="btn btn-primary btn-sm rounded-none rounded-l-md text-white"
+          disabled={options[title] <= minLimit}
         >
           -
         </button>
-        <input
-          className="input input-bordered input-primary w-[36px] rounded-none input-sm focus:outline-none"
-          type="text"
-          value={guest}
-        />
+        <span className="rounded-none px-3">{options[title]}</span>
         <button
-          onClick={handleIncrease}
+          onClick={() => handleGestOptions(title, "increment")}
           className="btn btn-primary btn-sm rounded-none rounded-r-md text-white"
         >
           +
