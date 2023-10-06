@@ -13,7 +13,7 @@ const Testimonials = () => {
   if (error) return <div>{error}</div>;
 
   return (
-    <div className="mb-12">
+    <div className="mb-28">
       <div className="flex items-center justify-between mb-8">
         <h3 className="text-2xl md:text-4xl lg:text-5xl font-semibold ">
           Our Testimonials
