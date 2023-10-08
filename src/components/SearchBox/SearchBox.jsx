@@ -1,8 +1,25 @@
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { useState } from "react";
+import "react-date-range/dist/styles.css"; // main style file
+import "react-date-range/dist/theme/default.css"; // theme css file
+
+import { MagnifyingGlassIcon, CalendarIcon } from "@heroicons/react/24/outline";
+import { useRef, useState } from "react";
 import SingleGuestCard from "./SingleGuestCard/SingleGuestCard";
+import { DateRange } from "react-date-range";
+import { format } from "date-fns";
+import useOutsideClick from "../../hooks/useOutsiteClick";
+import Button from "../UiComponents/Button";
 
 const SearchBox = () => {
+  const ref = useRef();
+  useOutsideClick(ref, "DateOptions", () => setDateIsOpen(false));
+  const [dateIsOpen, setDateIsOpen] = useState(false);
+  const [dateOption, setDateOption] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
   const [location, setLocation] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [options, setOptions] = useState({
@@ -36,8 +53,32 @@ const SearchBox = () => {
             />
           </div>
         </div>
-        <div>
-          <h3 className="font-semibold text-xl">Date For Rent</h3>
+        <div className="relative">
+          <h3 className="flex items-center justify-center gap-2 font-semibold text-xl">
+            <CalendarIcon className="h-6 w-6" />
+            Date For Rent
+          </h3>
+          <div
+            id="DateOptions"
+            onClick={() => setDateIsOpen(!dateIsOpen)}
+            className="text-sm font-semibold mt-1 text-blue-700 cursor-pointer"
+          >
+            {`${format(dateOption[0].startDate, "dd/MM/yyyy")} to ${format(
+              dateOption[0].endDate,
+              "dd/MM/yyyy"
+            )}`}
+          </div>
+          <div ref={ref}>
+            {dateIsOpen && (
+              <DateRange
+                className="absolute rounded-lg left-0 top-16 shadow-lg z-10 shadow-lg"
+                onChange={(item) => setDateOption([item.selection])}
+                ranges={dateOption}
+                minDate={new Date()}
+                moveRangeOnFirstSelection={true}
+              />
+            )}
+          </div>
         </div>
         <div>
           <h3 className="font-semibold text-xl">Guests</h3>
@@ -59,9 +100,9 @@ const SearchBox = () => {
           )}
         </div>
         <div className="w-full md:w-auto">
-          <button className="btn btn-block btn-primary inline-flex gap-4 text-white  hover:ring-2 hover:ring-offset-2 hover:ring-blue-700">
+          <Button>
             Search <MagnifyingGlassIcon className="h-6 w-6" />
-          </button>
+          </Button>
         </div>
       </div>
     </div>

@@ -1,3 +1,5 @@
+import Button from "../UiComponents/Button";
+
 const Discover = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-between gap-24 md:mb-28 mb-14 mt-14">
@@ -35,11 +37,11 @@ const Discover = () => {
             </p>
           </div>
         </div>
-        <button className="btn btn-primary px-10 capitalize text-white w-full md:w-auto hover:ring-2 hover:ring-offset-2 hover:ring-blue-700">
+        <Button style={`px-10 capitalize text-white md:w-auto`}>
           See More
-        </button>
+        </Button>
       </div>
-      <div className="w-full md:relative">
+      <div className="w-full md:relative ">
         <img
           src={"/public/images/discover-image-01.png"}
           alt=""
