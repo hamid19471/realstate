@@ -8,8 +8,10 @@ import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import useOutsideClick from "../../hooks/useOutsiteClick";
 import Button from "../UiComponents/Button";
+import { createSearchParams, useNavigate } from "react-router-dom";
 
 const SearchBox = () => {
+  const navigate = useNavigate();
   const ref = useRef();
   useOutsideClick(ref, "DateOptions", () => setDateIsOpen(false));
   const [dateIsOpen, setDateIsOpen] = useState(false);
@@ -35,6 +37,18 @@ const SearchBox = () => {
       } else {
         return { ...prev, [name]: prev[name] - 1 };
       }
+    });
+  };
+
+  const handleSearch = () => {
+    const encodeQueryParams = createSearchParams({
+      date: JSON.stringify(dateOption),
+      options: JSON.stringify(options),
+      location,
+    });
+    navigate({
+      pathname: "/search",
+      search: encodeQueryParams.toString(),
     });
   };
 
@@ -71,7 +85,7 @@ const SearchBox = () => {
           <div ref={ref}>
             {dateIsOpen && (
               <DateRange
-                className="absolute rounded-lg left-0 top-16 shadow-lg z-10 shadow-lg"
+                className="absolute rounded-lg left-0 top-16 shadow-lg z-10"
                 onChange={(item) => setDateOption([item.selection])}
                 ranges={dateOption}
                 minDate={new Date()}
@@ -100,7 +114,7 @@ const SearchBox = () => {
           )}
         </div>
         <div className="w-full md:w-auto">
-          <Button>
+          <Button onClick={handleSearch}>
             Search <MagnifyingGlassIcon className="h-6 w-6" />
           </Button>
         </div>
