@@ -29,7 +29,7 @@ const PropertySingleCard = ({ hotel }) => {
         <p className="bg-violet-200  p-2 rounded-lg font-bold text-lg">
           Price: {hotel.price}$
         </p>
-        <Button>Deatails</Button>
+        <Button style={`px-8 capitalize text-white md:w-auto`}>Deatails</Button>
       </div>
     </div>
   );

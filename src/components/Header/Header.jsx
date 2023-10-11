@@ -10,7 +10,7 @@ const Header = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
   return (
-    <div className="flex items-center justify-between shadow-md pb-4">
+    <div className="flex items-center justify-between py-4 ">
       <div className="font-bold text-xl md:text-3xl">
         soge<span className="text-blue-700">King</span>
       </div>
