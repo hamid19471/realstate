@@ -24,7 +24,7 @@
   "testimonials": [
     {
       "id": 1,
-      "image": "/public/testimonials_images/01.png",
+      "image": "testimonials_images/01.png",
       "name": "Jane Cooper",
       "position": "Marketing Coordinator",
       "rate": 4,
@@ -33,7 +33,7 @@
     },
     {
       "id": 2,
-      "image": "/public/testimonials_images/02.png",
+      "image": "testimonials_images/02.png",
       "name": "Cameron Williamson",
       "position": "Web Designer",
       "rate": 4.8,
@@ -42,7 +42,7 @@
     },
     {
       "id": 3,
-      "image": "/public/testimonials_images/03.png",
+      "image": "testimonials_images/03.png",
       "name": "Darrell Steward",
       "position": "President of Sales",
       "rate": 4.5,
@@ -51,7 +51,7 @@
     },
     {
       "id": 4,
-      "image": "/public/testimonials_images/04.png",
+      "image": "testimonials_images/04.png",
       "name": "Eleanor Pena",
       "position": "Medical Assistant",
       "rate": 4.2,
