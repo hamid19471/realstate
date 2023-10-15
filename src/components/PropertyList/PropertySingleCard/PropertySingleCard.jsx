@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Button from "../../../components/UiComponents/Button";
 import { MapPinIcon, StarIcon } from "@heroicons/react/24/solid";
 const PropertySingleCard = ({ hotel }) => {
@@ -29,7 +30,11 @@ const PropertySingleCard = ({ hotel }) => {
         <p className="bg-violet-200  p-2 rounded-lg font-bold text-lg">
           Price: {hotel.price}$
         </p>
-        <Button style={`px-8 capitalize text-white md:w-auto`}>Deatails</Button>
+        <Link to={`/hotel/${hotel.id}`}>
+          <Button style={`px-8 capitalize text-white md:w-auto`}>
+            Deatails
+          </Button>
+        </Link>
       </div>
     </div>
   );
