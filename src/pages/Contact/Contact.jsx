@@ -48,7 +48,7 @@ const Contact = () => {
               <p className="mt-2 text-gray-500 ">
                 Our friendly team is here to help.
               </p>
-              <p className="mt-2 text-blue-500">info@your-site.com</p>
+              <p className="mt-2 text-blue-500">support@sogeking.com</p>
             </div>
             <div className="flex flex-col items-center justify-center text-center">
               <span className="p-3 text-blue-500 rounded-full bg-blue-100/80 bg-gray-800">
@@ -76,9 +76,7 @@ const Contact = () => {
               <p className="mt-2 text-gray-500 ">
                 Come say hello at our office HQ.
               </p>
-              <p className="mt-2 text-blue-500">
-                100 Smith Street Collingwood VIC 3066 AU
-              </p>
+              <p className="mt-2 text-blue-500">Serpong, South Tanggerang</p>
             </div>
             <div className="flex flex-col items-center justify-center text-center">
               <span className="p-3 text-blue-500 rounded-full bg-blue-100/80 bg-gray-800">
@@ -98,7 +96,7 @@ const Contact = () => {
               </span>
               <h2 className="mt-4 text-lg font-medium text-gray-800 ">Phone</h2>
               <p className="mt-2 text-gray-500 ">Mon-Fri from 8am to 5pm.</p>
-              <p className="mt-2 text-blue-500">+1 (555) 000-0000</p>
+              <p className="mt-2 text-blue-500">021 - 733 - 249</p>
             </div>
           </div>
         </div>
