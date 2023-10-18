@@ -17,3 +17,11 @@
 .footer_menu {
   @apply hover:text-blue-700 hover:scale-105 duration-300 hover:font-semibold cursor-pointer transition-all;
 }
+
+.leaflet-container {
+  @apply h-screen rounded-lg;
+}
+
+.leaflet-container .leaflet-control-attribution {
+  @apply hidden;
+}
