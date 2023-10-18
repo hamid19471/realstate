@@ -42,7 +42,11 @@ const Discover = () => {
         </Button>
       </div>
       <div className="w-full md:relative ">
-        <img src={"images/discover-image-01.png"} alt="" className="w-full" />
+        <img
+          src={"/public/images/discover-image-01.png"}
+          alt=""
+          className="w-full"
+        />
         <img
           src={"/public/images/discover-image-02.png"}
           alt=""
