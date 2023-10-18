@@ -7,7 +7,7 @@ const SearchResult = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-between my-12 gap-20 md:gap-16 lg:gap-12">
+    <div className="flex flex-col-reverse md:flex-row items-start justify-between my-12 gap-20 md:gap-16 lg:gap-12">
       <div className="w-full md:h-[650px] md:overflow-scroll">
         {data.map((item) => (
           <Link
@@ -18,7 +18,7 @@ const SearchResult = () => {
           </Link>
         ))}
       </div>
-      <div className="bg-slate-100 rounded-2xl p-12 w-full ">
+      <div className="bg-slate-100 rounded-2xl p-4 w-full ">
         <Map />
       </div>
     </div>
