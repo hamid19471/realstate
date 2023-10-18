@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 const Hotels = () => {
   const { pathname } = useLocation();
   const currentPath = pathname.replace("/", "");
-  const { data, error, loading } = useFetch("http://localhost:3001/hotels");
+  const { data, error, loading } = useFetch("/hotels");
   if (loading) {
     return <div>Loading...</div>;
   }

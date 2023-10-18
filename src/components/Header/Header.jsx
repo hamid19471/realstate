@@ -6,11 +6,7 @@ import { NavLink } from "react-router-dom";
 import ResponsiveMenu from "../ResponsiveMenu/ResponsiveMenu";
 import useFetch from "../../hooks/useFetch";
 const Header = () => {
-  const {
-    data: menu,
-    error,
-    loading,
-  } = useFetch("https://fake-data-eight.vercel.app/menu");
+  const { data: menu, error, loading } = useFetch("/menu");
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
   return (

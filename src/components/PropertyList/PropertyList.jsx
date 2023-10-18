@@ -2,11 +2,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import useFetch from "../../hooks/useFetch";
 import PropertySingleCard from "./PropertySingleCard/PropertySingleCard";
 const PropertyList = () => {
-  const {
-    data: hotels,
-    loading,
-    error,
-  } = useFetch("https://fake-data-eight.vercel.app/hotels");
+  const { data: hotels, loading, error } = useFetch("/hotels");
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;

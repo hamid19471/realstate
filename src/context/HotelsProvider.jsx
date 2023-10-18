@@ -7,7 +7,7 @@ const HotelsProvider = ({ children }) => {
   const location = searchParams.get("location");
   const rooms = JSON.parse(searchParams.get("options"))?.rooms;
   const { data, error, loading } = useFetch(
-    "https://fake-data-eight.vercel.app/hotels",
+    "/hotels",
     `city_like=${location || ""}&accommodates_gte=${rooms || 1}`
   );
   return (

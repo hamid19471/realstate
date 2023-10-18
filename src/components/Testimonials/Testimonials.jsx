@@ -3,11 +3,7 @@ import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import useFetch from "../../hooks/useFetch";
 
 const Testimonials = () => {
-  const {
-    data: testimonials,
-    error,
-    loading,
-  } = useFetch("https://fake-data-eight.vercel.app/testimonials");
+  const { data: testimonials, error, loading } = useFetch("/testimonials");
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;
