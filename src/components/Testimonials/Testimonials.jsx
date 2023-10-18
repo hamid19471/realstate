@@ -7,7 +7,7 @@ const Testimonials = () => {
     data: testimonials,
     error,
     loading,
-  } = useFetch("http://localhost:3001/testimonials");
+  } = useFetch("https://fake-data-eight.vercel.app/testimonials");
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>{error}</div>;

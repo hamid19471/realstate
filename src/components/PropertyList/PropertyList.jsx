@@ -6,7 +6,7 @@ const PropertyList = () => {
     data: hotels,
     loading,
     error,
-  } = useFetch("http://localhost:3001/hotels");
+  } = useFetch("https://fake-data-eight.vercel.app/hotels");
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error</div>;
