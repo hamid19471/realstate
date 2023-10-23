@@ -2,7 +2,7 @@ import {
   UserIcon,
   ArrowLeftOnRectangleIcon,
 } from "@heroicons/react/24/outline";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ResponsiveMenu from "../ResponsiveMenu/ResponsiveMenu";
 import useFetch from "../../hooks/useFetch";
 const Header = () => {
@@ -12,7 +12,9 @@ const Header = () => {
   return (
     <div className="flex items-center justify-between py-4 ">
       <div className="font-bold text-xl md:text-3xl">
-        soge<span className="text-blue-700">King</span>
+        <Link to="/">
+          soge<span className="text-blue-700">King</span>
+        </Link>
       </div>
       <ResponsiveMenu />
       <div className="hidden sm:flex">
