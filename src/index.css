@@ -19,9 +19,9 @@
 }
 
 .leaflet-container {
-  @apply h-screen rounded-lg;
+  @apply h-full rounded-lg;
 }
 
-.leaflet-container .leaflet-control-attribution {
+.leaflet-control-attribution {
   @apply hidden;
 }
