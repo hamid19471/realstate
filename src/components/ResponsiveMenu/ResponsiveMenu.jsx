@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const ResponsiveMenu = () => {
   return (
     <div className="sm:hidden w-full fixed bottom-0 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-end mb-4 justify-center mx-auto">
-      <ul className="menu gap-4 menu-horizontal bg-base-200 rounded-box">
+      <ul className="menu gap-8 menu-horizontal bg-base-300 rounded-box">
         <li>
           <NavLink to="/" className="tooltip" data-tip="Home">
             <HomeIcon className="h-5 w-5" />

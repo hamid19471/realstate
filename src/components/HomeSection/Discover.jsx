@@ -2,7 +2,7 @@ import Button from "../UiComponents/Button";
 
 const Discover = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between gap-24 md:mb-28 mb-14 mt-14">
+    <div className="flex flex-col md:flex-row items-center justify-between gap-24 md:mb-28 mb-14 mt-14 p-4">
       <div className="w-full">
         <h3 className="font-medium text-[30px] lg:text-[40px] mb-8">
           Discover your dream home with us

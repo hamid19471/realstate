@@ -10,7 +10,7 @@ const SearchResult = () => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
   return (
-    <div className="flex flex-col-reverse md:flex-col items-start justify-between my-12 gap-20 md:gap-16 lg:gap-12">
+    <div className="flex flex-col md:flex-col items-start justify-between my-12 gap-20 md:gap-16 lg:gap-12">
       <div className="flex flex-col gap-3 items-center justify-center bg-blue-100 py-12 mt-5 rounded-lg w-full mb-12">
         <h1 className="font-bold text-5xl uppercase">Rearch Result</h1>
         <div className="flex items-center justify-center">
