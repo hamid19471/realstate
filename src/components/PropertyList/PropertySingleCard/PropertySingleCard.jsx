@@ -30,9 +30,11 @@ const PropertySingleCard = ({ hotel }) => {
         <p className="bg-violet-200  p-2 rounded-lg font-bold text-lg">
           Price: {hotel.price}$
         </p>
-        <Link to={`/hotel/${hotel.id}`}>
+        <Link
+          to={`/hotel/${hotel.id}?lat=${hotel.latitude}&lng=${hotel.longitude}`}
+        >
           <Button style={`px-8 capitalize text-white md:w-auto`}>
-            Deatails
+            Details
           </Button>
         </Link>
       </div>
